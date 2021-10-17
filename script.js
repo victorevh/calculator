@@ -1,22 +1,24 @@
 
-
-const number1 = 20
-const number2 = 12
-
-
-function soma() {
-    return soma = number1 + number2
+function insert(number){
+    var numero = document.getElementById('input').innerHTML;
+    document.getElementById('input').innerHTML = numero + number
 }
 
-function sub() {
-    return sub = number1 - number2
+function clean(){
+    document.getElementById('input').innerHTML  = "";
 }
 
-function divisor() {
-    return divisor = number1 / number2
+function backspace(){
+    var result = document.getElementById('input').innerHTML;
+    document.getElementById('input').innerHTML = result.substring(0, result.length -1)
 }
 
-function mutiplicar() {
-    return mutiplicar = number1 * number2
+function calculate(){
+    var result = document.getElementById('input').innerHTML
+    if(result){
+        document.getElementById('input').innerHTML = eval(result)
+    }
+    else{
+        document.getElementById('input').innerHTML = "Insira um Valor"
+    }
 }
-
